@@ -3,23 +3,23 @@ name: OFP Decrypter by Area69Labs
 on:
   workflow_dispatch:
     inputs:
-      ofp_link:
+      ofp_link: https://mega.nz/file/JOpWhYwJ#95zwT0WTQ_BjlDnkXbRP5A6osdwJimGVxvNBFxantcs
         description: 'OFP Firmaware Link'
         required: true
-      filename:
+      filename: RMX2001 11 C.15 200122 91b378cc decrypted
         description: 'The filename You want in output (make unique)'
         required: true
-      devicetype:
+      devicetype: MTK
         description: 'Specify Your Device type. { For Qualcomm (QC) FOR MEDIATEK (MTK) }'
         required: true
-      simage:
+      simage: 
         description: 'Do you want to merege super images, if yes then type <YES>'
         required: false
-        default: 'NO'
+        default: 'YES'
       bigfile:
         description: 'Set to YES if your ofp file is more than 8GB. Setting to yes will take more time.'
         required: false
-        default: 'NO'        
+        default: 'YES'        
 
 env:
   OFP_LINK: ${{ github.event.inputs.ofp_link }}
